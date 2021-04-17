@@ -242,7 +242,7 @@ class FineTuning:
         print("  Validation Accuracy: {0:.2f}".format(avg_val_accuracy))
 
 
-class Sentiment_Analysis(WinterSchool_FineTuning):
+class Sentiment_Analysis(FineTuning):
     def __init__(self, tokenizer_path, train_ratio=None, batch_size=None, epoch=None):
         super().__init__(tokenizer_path, train_ratio, batch_size, epoch)
         self.build()
