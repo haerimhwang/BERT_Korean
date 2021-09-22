@@ -274,4 +274,4 @@ class Sentiment_Analysis(FineTuning):
             self.attention_masks = self.attention_masks.to("cuda")
             logit = self.bert(self.input_ids,
                               attention_mask=self.attention_masks)
-        return "긍정" if np.argmax(logit[0].detach().cpu().numpy()) else "negative"
+        return "긍정" if np.argmax(logit[0].detach().cpu().numpy()) else ""
